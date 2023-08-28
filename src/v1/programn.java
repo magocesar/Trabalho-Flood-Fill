@@ -19,16 +19,15 @@ public class programn {
         int[][] arr = {
             {1, 0, 0, 0},
             {0, 1, 0, 0},
-            {0, 0, 0, 1},
+            {0, 0, 1, 1},
             {1, 1, 0, 1},
             {1, 0, 0, 0},  
         };
 
-        ff f = new ff(createArr());
+        ff f = new ff(arr);
 
         try{
-            f.start(0, 1);
-            f.print();
+            f.start(1, 0);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
