@@ -49,6 +49,8 @@ public class ff {
         //Pinta o primeiro ponto
         matrix[line][column] = 2;
 
+        print();
+
         while(!queue.isEmpty()){
             try{
                 pos p = queue.remove();
@@ -57,21 +59,25 @@ public class ff {
 
                 if(isSafe(auxLine + 1, auxColumn)){
                     matrix[auxLine + 1][auxColumn] = 2;
+                    print();
                     queue.add(new pos(auxLine + 1, auxColumn));
                 }
 
                 if(isSafe(auxLine - 1, auxColumn)){
                     matrix[auxLine - 1][auxColumn] = 2;
+                    print();
                     queue.add(new pos(auxLine - 1, auxColumn));
                 }
 
                 if(isSafe(auxLine, auxColumn + 1)){
                     matrix[auxLine][auxColumn + 1] = 2;
+                    print();
                     queue.add(new pos(auxLine, auxColumn + 1));
                 }
 
                 if(isSafe(auxLine, auxColumn - 1)){
                     matrix[auxLine][auxColumn - 1] = 2;
+                    print();
                     queue.add(new pos(auxLine, auxColumn - 1));
                 }
             }catch(Exception e){
@@ -88,13 +94,18 @@ public class ff {
     }
 
     public void print(){
+        System.out.println();
         for(int i = 0; i < matrix.length; i++){
-            System.out.print("[ ");
+            System.out.print("[");
             for(int j = 0; j < matrix[0].length; j++){
-                    System.out.print(matrix[i][j] + " ");
+                    if(j == matrix[0].length - 1)
+                        System.out.print(matrix[i][j]);
+                    else
+                        System.out.print(matrix[i][j] + ", ");
             }
             System.out.print("]");
             System.out.println();
         }
+        System.out.println();
     }
 }

@@ -28,7 +28,6 @@ public class programn {
 
         try{
             f.start(1, 0);
-            f.print();
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
