@@ -21,11 +21,8 @@
 <p>0 = Vazio, 1 = Bloqueado, 2 = Pintado</p>
 
 <img src="img/img_inicial.jpeg">
-<br>
 
 <p>Resultado Final da Execução</p>
 
-<br>
 <img src="img/img_final.jpeg">
-<br>
 
