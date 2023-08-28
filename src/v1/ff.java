@@ -34,14 +34,11 @@ public class ff {
             throw new Exception("Initial position already visited");
         }
 
-        //Escolher tipo de fila / pilha / Dll
-        //CircularQueue<pos> queue = new CircularQueue<pos>(matrix[0].length * matrix.length);
-        Stack<pos> queue = new Stack<pos>(matrix[0].length * matrix.length);
-        //StackV2<pos> queue = new StackV2<pos>();
-        //QueueV2<pos> queue = new QueueV2<pos>();
+        Stack<pos> need_to_paint_points = new Stack<pos>(4);
+        CircularQueue<pos> painted_pos = new CircularQueue<pos>(matrix[0].length * matrix.length);
         
         try{
-            queue.add(new pos(line, column));
+            painted_pos.add(new pos(line, column));
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
@@ -51,35 +48,59 @@ public class ff {
 
         print();
 
-        while(!queue.isEmpty()){
+        while(!painted_pos.isEmpty()){
             try{
-                pos p = queue.remove();
+                pos p = painted_pos.remove();
                 int auxLine = p.getl();
                 int auxColumn = p.getc();
 
                 if(isSafe(auxLine + 1, auxColumn)){
-                    matrix[auxLine + 1][auxColumn] = 2;
-                    print();
-                    queue.add(new pos(auxLine + 1, auxColumn));
+                    try{
+                        need_to_paint_points.add(new pos(auxLine + 1, auxColumn));
+                    }catch(Exception e){
+                        System.out.println(e.getMessage());
+                    }
                 }
 
                 if(isSafe(auxLine - 1, auxColumn)){
-                    matrix[auxLine - 1][auxColumn] = 2;
-                    print();
-                    queue.add(new pos(auxLine - 1, auxColumn));
+                    try{
+                        need_to_paint_points.add(new pos(auxLine - 1, auxColumn));
+                    }catch(Exception e){
+                        System.out.println(e.getMessage());
+                    }
                 }
 
                 if(isSafe(auxLine, auxColumn + 1)){
-                    matrix[auxLine][auxColumn + 1] = 2;
-                    print();
-                    queue.add(new pos(auxLine, auxColumn + 1));
+                    try{
+                        need_to_paint_points.add(new pos(auxLine, auxColumn + 1));
+                    }catch(Exception e){
+                        System.out.println(e.getMessage());
+                    }
                 }
 
                 if(isSafe(auxLine, auxColumn - 1)){
-                    matrix[auxLine][auxColumn - 1] = 2;
-                    print();
-                    queue.add(new pos(auxLine, auxColumn - 1));
+                    try{
+                        need_to_paint_points.add(new pos(auxLine, auxColumn - 1));
+                    }catch(Exception e){
+                        System.out.println(e.getMessage());
+                    }
                 }
+
+                while(!need_to_paint_points.isEmpty()){
+                    try{
+                        pos aux = need_to_paint_points.remove();
+                        int auxl = aux.getl();
+                        int auxc = aux.getc();
+
+                        matrix[auxl][auxc] = 2;
+                        print();
+                        painted_pos.add(aux);
+
+                    }catch(Exception e){
+                        System.out.println(e.getMessage());
+                    }
+                }
+
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
