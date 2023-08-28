@@ -27,12 +27,8 @@ public class programn {
         ff f = new ff(createArr());
 
         try{
-<<<<<<< Updated upstream
-            f.start(1, 0);
-=======
             f.start(0, 1);
             f.print();
->>>>>>> Stashed changes
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
