@@ -10,7 +10,7 @@
 
 <hr>
 
-<h2>Divisão das Pastas</h2>
+<h2>Flood-Fill</h2>
 
 <p>O trabalho tem como objetivo implementar o algoritmo Flood-Fill, aceitando uma matriz de inteiros inicial e retornando essa mesma matriz após a execução do algoritmo".</p>
 
