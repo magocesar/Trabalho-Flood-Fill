@@ -24,10 +24,10 @@ public class programn {
             {1, 0, 0, 0},  
         };
 
-        ff f = new ff(arr);
+        ff f = new ff(createArr());
 
         try{
-            f.start(0, 1);
+            f.start(1, 0);
             f.print();
         }catch(Exception e){
             System.out.println(e.getMessage());
