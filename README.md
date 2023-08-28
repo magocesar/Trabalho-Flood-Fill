@@ -14,13 +14,11 @@
 
 <p>O trabalho tem como objetivo implementar o algoritmo Flood-Fill, aceitando uma matriz de inteiros inicial e retornando essa mesma matriz após a execução do algoritmo".</p>
 
-<br>
+<hr>
 
 <p>Input Matriz Inicial -> Começando a execução na coordenada -> Linha 0, Coluna 1</p>
 
-<br>
 <p>0 = Vazio, 1 = Bloqueado, 2 = Pintado</p>
-<br>
 
 <img src="img/img_inicial.jpeg">
 <br>
