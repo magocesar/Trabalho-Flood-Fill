@@ -16,9 +16,12 @@
 
 <br>
 
-<p>Input Matriz Inicial -> Começando a execução na coordenada -> Linha 0, Coluna 1 -> 0 = Vazio, 1 = Bloqueado, 2 = Pintado</p>
+<p>Input Matriz Inicial -> Começando a execução na coordenada -> Linha 0, Coluna 1</p>
 
 <br>
+<p>0 = Vazio, 1 = Bloqueado, 2 = Pintado</p>
+<br>
+
 <img src="img/img_inicial.jpeg">
 <br>
 
