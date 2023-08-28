@@ -21,11 +21,7 @@ public class ff {
     }
 
     public void start(int line, int column) throws Exception{
-        //Escolher tipo de fila / pilha / Dll
-        //CircularQueue<pos> queue = new CircularQueue<pos>(arr[0].length * arr.length);
-        //Stack<pos> queue = new Stack<pos>(arr[0].length * arr.length);
-        //StackV2<pos> queue = new StackV2<pos>();
-
+        
         if(line < 0 || line >= matrix.length || column < 0 || column >= matrix[0].length){
             throw new Exception("Invalid position");
         }
@@ -38,6 +34,10 @@ public class ff {
             throw new Exception("Initial position already visited");
         }
 
+        //Escolher tipo de fila / pilha / Dll
+        //CircularQueue<pos> queue = new CircularQueue<pos>(arr[0].length * arr.length);
+        //Stack<pos> queue = new Stack<pos>(arr[0].length * arr.length);
+        //StackV2<pos> queue = new StackV2<pos>();
         QueueV2<pos> queue = new QueueV2<pos>();
         
         try{
