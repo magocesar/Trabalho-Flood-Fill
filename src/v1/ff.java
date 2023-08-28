@@ -35,10 +35,10 @@ public class ff {
         }
 
         //Escolher tipo de fila / pilha / Dll
-        //CircularQueue<pos> queue = new CircularQueue<pos>(arr[0].length * arr.length);
-        //Stack<pos> queue = new Stack<pos>(arr[0].length * arr.length);
+        //CircularQueue<pos> queue = new CircularQueue<pos>(matrix[0].length * matrix.length);
+        Stack<pos> queue = new Stack<pos>(matrix[0].length * matrix.length);
         //StackV2<pos> queue = new StackV2<pos>();
-        QueueV2<pos> queue = new QueueV2<pos>();
+        //QueueV2<pos> queue = new QueueV2<pos>();
         
         try{
             queue.add(new pos(line, column));
